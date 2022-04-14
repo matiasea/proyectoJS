@@ -1,4 +1,4 @@
-//INGRESO DE USUARIO REGISTRADO
+/* //INGRESO DE USUARIO REGISTRADO
  let usuario = prompt ("Ingresa tu usuario")
 let contra = prompt ("Ingresa tu contraseña")
 let usuario1 = "Matias"
@@ -11,7 +11,7 @@ while ((usuario != usuario1) || (contra != contra1)) {
     contra = prompt ("Ingresa tu contraseña")
     
 }
-
+ */
 alert ("Bienvenido " + usuario) 
 
 //_________________________________
