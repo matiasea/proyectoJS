@@ -1,4 +1,20 @@
-//_____________ 
+//INGRESO DE USUARIO REGISTRADO
+ let usuario = prompt ("Ingresa tu usuario")
+let contra = prompt ("Ingresa tu contraseña")
+let usuario1 = "Matias"
+let contra1 = 1234
+
+
+while ((usuario != usuario1) || (contra != contra1)) {
+    alert ("Ingreso Incorrecto, vuelve a intentarlo")
+    usuario = prompt ("Ingresa tu usuario")
+    contra = prompt ("Ingresa tu contraseña")
+    
+}
+
+alert ("Bienvenido " + usuario) 
+
+//_________________________________
 
 const productos = [
     {articulo: "LAVARROPAS", marca: "Philco", precio: 58000},
