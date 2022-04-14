@@ -1,0 +1,27 @@
+html{
+    margin: 0px;
+    padding: 0px
+}
+
+
+
+h1{
+    font-weight: bold;
+    padding-top: 10%;
+    text-align: center;
+    font-size: 35px;
+    background-color: rgb(34, 34, 78);
+    color: rgb(33, 189, 163);
+}
+
+.div-principal{
+    padding: 10%;
+    align-items: center;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(34, 34, 78);
+    color: azure;
+    font-weight: bold;
+}
