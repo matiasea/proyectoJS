@@ -12,7 +12,7 @@ while ((usuario != usuario1) || (contra != contra1)) {
     
 }
  */
-alert ("Bienvenido " + usuario) 
+//alert ("Bienvenido " + usuario) 
 
 //_________________________________
 
@@ -105,25 +105,18 @@ btnTerminarCompra.addEventListener("click", totalCarrito);
 
 
 //busqueda de productos
-const busquedaArticulo = (articulo) => {
-    productos.filter((busqueda) => busqueda.articulo === articulo)
-    console.log (articulo)
 
-}
+let busquedaProducto = document.getElementById("busqueda")
 
+ const busquedaArticulo = () => {
+    productos.filter((productos) => productos.articulo === busquedaProducto)
+   console.log(productos.articulo)
 
+} 
 
-let productoBuscado = document.getElementById("busqueda")
-productoBuscado.addEventListener("submit", busquedaArticulo);
-
-/* let busquedaProducto = productos.filter((productos) => {
-    return productos.articulo === productoBuscado, 
-    console.log (articulo)
-  
-}
-)
- */
-
+let btnbuscar = document.getElementById("btn-buscar");
+btnbuscar.addEventListener("submit", busquedaArticulo);
+ 
 
 //ver carrito
 
