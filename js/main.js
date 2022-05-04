@@ -16,19 +16,32 @@ while ((usuario != usuario1) || (contra != contra1)) {
 
 //_________________________________
 
-const productos = [
+let productos = [];
+
+const traerProductos = async () => {
+    const resp = await
+    fetch('./local.json')
+    const data = await resp.json()
+    productos.push(...data)
+    console.log(...data)
+    productosDom()
+}
+
+traerProductos();
+
+/* const productos = [
     {id: 001, articulo: "LAVARROPAS", marca: "Philco", precio: 58000, img: "../img/lavarropas.jpg", descripcion1: "Capacidad 6Kg.", descripcion2: "Centrifugado 800 RPM"},
     {id: 002, articulo: "HELADERA", marca: "Patrick", precio: 65000, img: "../img/heladera.jpg", descripcion1: "Capacidad: 329LTS", descripcion2: "Dispenser de Agua"},
     {id: 003, articulo: "COCINA", marca: "Longvie", precio: 49000, img: "../img/cocina.jpg", descripcion1: "Luz en horno", descripcion2: "Encendido Electrico"},
     {id: 004, articulo: "TV SMART", marca: "Samsung", precio: 35000, img: "../img/TV.jpg", descripcion1: "Tecnologia Smart", descripcion2: "Resolucion UHD"},
     {id: 005, articulo: "TOSTADORA", marca: "Atma", precio: 5000, img: "../img/tostadora.jpg", descripcion1: "1000 W", descripcion2: "Capacidad 2 panes"},
     {id: 006, articulo: "EXPRIMIDOR", marca: "Philips", precio: 4500, img: "../img/exprimidor.jpg", descripcion1: "0,5 LTS", descripcion2: "300 W"},
-    ];
+    ]; */
 
 const carrito = []
-//const verCarrito = []
 
-for (let i = 0; i < productos.length; i++) {
+function productosDom(){
+    for (let i = 0; i < productos.length; i++) {
     const element = productos[i];
     const {articulo, marca, precio, img, descripcion1, descripcion2} = element;
     const cardGroup = document.getElementsByClassName("card-group")
@@ -42,7 +55,9 @@ for (let i = 0; i < productos.length; i++) {
                 </div>`  
     cardGroup[0].innerHTML += dom;
     //console.log(cardGroup);
-}
+}}
+
+
 const botonAgregar = document.getElementsByClassName("btn-agregar");
 
 for (let i = 0; i < botonAgregar.length; i++) {
