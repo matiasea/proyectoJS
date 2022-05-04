@@ -49,21 +49,22 @@ function productosDom(){
                     <img src=${img} class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${articulo + " " + marca}</h5>
-                        <p class="card-text">${descripcion1} <br> ${descripcion2} <br> PRECIO: $ ${precio}</p>
+                        <p class="card-text">${descripcion1} <br> ${descripcion2} <br> PRECIO: $ ${precio.toLocaleString()}</p>
                         <button class="btn-agregar">Agregar al Carrito</button><br>
                     </div>
                 </div>`  
     cardGroup[0].innerHTML += dom;
     //console.log(cardGroup);
-}}
-
-
+}
 const botonAgregar = document.getElementsByClassName("btn-agregar");
 
 for (let i = 0; i < botonAgregar.length; i++) {
     const element = botonAgregar[i];
     element.addEventListener("click", agregarAlCarrito)
 }
+}
+
+
 
 function agregarAlCarrito(e){
     const prod = (e.target).parentNode.parentNode;
