@@ -104,7 +104,7 @@ console.log(productoBuscado) */
 const busquedaProducto = document.getElementById("busqueda");
 function buscarProducto(){
     busquedaArticulo = productos.filter(function(producto) {
-    return productos.articulo == "HELADERA";
+    return productos.articulo === busquedaProducto;
     })
     console.log(busquedaArticulo)
     }
