@@ -23,20 +23,11 @@ const traerProductos = async () => {
     fetch('./local.json')
     const data = await resp.json()
     productos.push(...data)
-    console.log(...data)
+    //console.log(...data)
     productosDom()
 }
 
 traerProductos();
-
-/* const productos = [
-    {id: 001, articulo: "LAVARROPAS", marca: "Philco", precio: 58000, img: "../img/lavarropas.jpg", descripcion1: "Capacidad 6Kg.", descripcion2: "Centrifugado 800 RPM"},
-    {id: 002, articulo: "HELADERA", marca: "Patrick", precio: 65000, img: "../img/heladera.jpg", descripcion1: "Capacidad: 329LTS", descripcion2: "Dispenser de Agua"},
-    {id: 003, articulo: "COCINA", marca: "Longvie", precio: 49000, img: "../img/cocina.jpg", descripcion1: "Luz en horno", descripcion2: "Encendido Electrico"},
-    {id: 004, articulo: "TV SMART", marca: "Samsung", precio: 35000, img: "../img/TV.jpg", descripcion1: "Tecnologia Smart", descripcion2: "Resolucion UHD"},
-    {id: 005, articulo: "TOSTADORA", marca: "Atma", precio: 5000, img: "../img/tostadora.jpg", descripcion1: "1000 W", descripcion2: "Capacidad 2 panes"},
-    {id: 006, articulo: "EXPRIMIDOR", marca: "Philips", precio: 4500, img: "../img/exprimidor.jpg", descripcion1: "0,5 LTS", descripcion2: "300 W"},
-    ]; */
 
 const carrito = []
 
@@ -44,15 +35,20 @@ function productosDom(){
     for (let i = 0; i < productos.length; i++) {
     const element = productos[i];
     const {articulo, marca, precio, img, descripcion1, descripcion2} = element;
-    const cardGroup = document.getElementsByClassName("card-group")
-    const dom = `<div class="card" id="${marca}">
-                    <img src=${img} class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">${articulo + " " + marca}</h5>
-                        <p class="card-text">${descripcion1} <br> ${descripcion2} <br> PRECIO: $ ${precio.toLocaleString()}</p>
-                        <button class="btn-agregar">Agregar al Carrito</button><br>
-                    </div>
-                </div>`  
+    const cardGroup = document.getElementsByClassName("card")
+    const dom = 
+    `<div class="row g-0" id="${marca}"> 
+    <div class="col-md-4" >
+  <img src=${img} class="img-fluid rounded-start" alt="...">
+  </div>
+  <div class="col-md-8">
+  <div class="card-body">
+    <h5 class="card-title">${articulo + " " + marca}</h5>
+    <p class="card-text">${descripcion1} <br> ${descripcion2} <br> PRECIO: $ ${precio.toLocaleString()}</p>
+    <button class="btn-agregar">Agregar al Carrito</button><br>
+    </div>
+    </div>
+</div>`
     cardGroup[0].innerHTML += dom;
     //console.log(cardGroup);
 }
@@ -67,13 +63,16 @@ for (let i = 0; i < botonAgregar.length; i++) {
 
 
 function agregarAlCarrito(e){
-    const prod = (e.target).parentNode.parentNode;
+    const prod = (e.target).parentNode.parentNode.parentNode;
     const id = prod.getAttribute("id");
     const productoEncontrado = productos.find((item) => item.marca == id);
     carrito.push(productoEncontrado);
     console.log(carrito);
     const guardarCarrito = JSON.stringify(carrito);
     localStorage.setItem("carrito", guardarCarrito);
+    const contador = document.getElementById("contador1");
+    const numerito = carrito.length;
+    document.body.append(numerito);
     Toastify({
         text: "Producto agregado al carrito!",
         duration: 2500,
@@ -88,13 +87,42 @@ function agregarAlCarrito(e){
 }
 
 //BUSCAR PRODUCTO
-let busquedaProducto = document.getElementById("busqueda");
+//FORMA 1
+/* const productoBuscado = [];
+
+for (let i = 0; i < productos.length; index++) {
+    if (productos[i].articulo === "HELADERA") {
+        productoBuscado.push(productos[i].articulo);
+    }
+    
+}
+
+console.log(productoBuscado) */
+
+
+
+const busquedaProducto = document.getElementById("busqueda");
 function buscarProducto(){
-    let busquedaArticulo = productos.filter(function(productos) {
-    return productos.articulo === busquedaProducto;
+    busquedaArticulo = productos.filter(function(producto) {
+    return productos.articulo == "HELADERA";
     })
     console.log(busquedaArticulo)
     }
+    //buscarProducto()
 
     let btnbuscar = document.getElementById("btn-buscar");
     btnbuscar.addEventListener("click", buscarProducto);
+
+//CONTADOR CARRITO DE COMPRA
+/* const contador = document.getElementsByClassName("contador")
+const numerito = carrito.length;
+document.body.append(numerito); */
+/* const contador = document.getElementsByClassName("contador")
+console.log(contador)
+
+numerito = carrito.length,
+
+
+ */
+
+

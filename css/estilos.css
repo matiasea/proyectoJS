@@ -1,18 +1,26 @@
 html{
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+header{
+    background-color: rgb(230, 230, 235);
+}
+main{
+    background-image: linear-gradient(to right,rgb(230, 230, 235),rgb(38, 65, 90));
+}
 
-
-h1{
+h1 {
     font-weight: bold;
-    padding-top: 10%;
+    color: #0af7c3;
+    padding: 10px;
+    border-style: solid;
+    font-size: 50px; 
     text-align: center;
-    font-size: 35px;
-    background-color: rgb(34, 34, 78);
-    color: rgb(33, 189, 163);
+    background-color: rgb(64, 81, 128);
 }
+  
 
 .div-principal{
     padding: 10%;
@@ -24,4 +32,45 @@ footer{
     background-color: rgb(34, 34, 78);
     color: azure;
     font-weight: bold;
+}
+
+div{
+    padding: 10px;
+}
+
+.boton-carro{
+    position: absolute;
+  margin-left: 90%;
+  margin-top: 0px;
+    background-color: rgb(230, 230, 235);
+}
+
+.input-busq{
+    position: absolute;
+  margin-left: 50%;
+}
+
+.logo {
+    width: 150px;
+    padding: 30px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 0px;
+    }
+
+.carrito{
+    background-color: rgb(253, 253, 253);
+    width: 60%;
+    align: center;
+}
+
+.contador {
+    font-weight: bold;
+    color: #f70a0a;
+    padding: 10px;
+    border-style: solid;
+    font-size: 20px; 
+    text-align: center;
+    background-color: rgb(116, 128, 64);
+    z-index: 999;
 }

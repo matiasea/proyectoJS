@@ -33,7 +33,7 @@
         "precio":35000,
         "img":"../img/TV.jpg",
         "descripcion1":"Tecnologia Smart",
-        "descripcion2":"Resolucion UHD"
+        "descripcion2":"32P - Resolucion UHD"
     },
     {
         "id":"005",
@@ -52,5 +52,68 @@
         "img":"../img/exprimidor.jpg",
         "descripcion1":"0,5 LTS",
         "descripcion2":"300 W"
+    },
+    {
+        "id":"007",
+        "articulo":"HELADERA",
+        "marca":"Bambi",
+        "precio":56000,
+        "img":"../img/heladera-b.jpg",
+        "descripcion1":"365 LTS",
+        "descripcion2":"Clase A++"
+    },
+    {
+        "id":"008",
+        "articulo":"TV SMART",
+        "marca":"Noblex",
+        "precio":71000,
+        "img":"../img/tv-55.jpg",
+        "descripcion1":"Tecnologia Smart",
+        "descripcion2":"55P - Resolucion 4K"
+    },
+    {
+        "id":"009",
+        "articulo":"TV SMART",
+        "marca":"Noblex",
+        "precio":124000,
+        "img":"../img/tv-75.jpg",
+        "descripcion1":"Tecnologia Smart",
+        "descripcion2":"75P - Resolucion 8K"
+    },
+    {
+        "id":"010",
+        "articulo":"COCINA",
+        "marca":"Florencia",
+        "precio":47000,
+        "img":"../img/cocina-f.jpg",
+        "descripcion1":"Facil Limpieza",
+        "descripcion2":"Timer - Termostato"
+    },
+    {
+        "id":"011",
+        "articulo":"PAVA ELECTRICA",
+        "marca":"Atma",
+        "precio":8200,
+        "img":"../img/pava-a.jpg",
+        "descripcion1":"Regulador de Temperatura",
+        "descripcion2":"1.5 LTS"
+    },
+    {
+        "id":"012",
+        "articulo":"PAVA ELECTRICA",
+        "marca":"Kanji",
+        "precio":4500,
+        "img":"../img/pava-k.jpg",
+        "descripcion1":"Indicador de Nivel de Agua",
+        "descripcion2":"1.7 LTS"
+    },
+    {
+        "id":"013",
+        "articulo":"CAFETERA",
+        "marca":"Oster",
+        "precio":54500,
+        "img":"../img/cafetera.jpg",
+        "descripcion1":" Cafe molido o capsulas (Nespresso)",
+        "descripcion2":"Sistema termico avanzado"
     }
     ]
