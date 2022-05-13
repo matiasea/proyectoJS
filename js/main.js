@@ -72,7 +72,7 @@ function agregarAlCarrito(e){
     localStorage.setItem("carrito", guardarCarrito);
     const contador = document.getElementById("contador1");
     const numerito = carrito.length;
-    document.body.append(numerito);
+    contador.appendChild(numerito);
     Toastify({
         text: "Producto agregado al carrito!",
         duration: 2500,
