@@ -22,8 +22,13 @@ class Direccion{
         let comentario = document.getElementById("comentario");
 
         let direccion1 = new Direccion(calle,numero,localidad,cp,provincia,telefono,comentario);
-        console.log(direccion1)
         
+        console.log(direccion1);
+        
+        const guardarDireccion = JSON.stringify(direccion1);
+        localStorage.setItem("direccionEntrega", guardarDireccion);
+        
+
     
     }
 
@@ -40,14 +45,14 @@ class Direccion{
   <input type="text" class="form-control" placeholder="Provincia" aria-label="Username" id= "provincia">
   <input type="text" class="form-control" placeholder="Telefono" aria-label="Server" id= "telefono"> 
 </div> 
-  
-
   <div class="input-group">
     <span class="input-group-text">Comentarios</span>
     <textarea class="form-control" aria-label="With textarea" id= "comentario"></textarea>
   </div>
-  <button type="submit" id="btn-entrega"><a href="../secciones/pago.html">listo!</a></button>
-  `;
+
+
+  <button type="submit" id="btn-entrega">Listo!</button>`
+  ;
 
   let divEntrega = document.createElement("div");
   
@@ -58,7 +63,61 @@ class Direccion{
 
   let btnentrega = document.getElementById("btn-entrega");
     btnentrega.addEventListener("click", () => {
-            nuevaDireccion();
+        if (validar_formulario()){
+          nuevaDireccion();
         
+        }else{
+          alert("Ingrese toda la información necesaria");
+        }   
     });
     
+    
+//VALIDAR FORMULARIO
+    function validar_formulario(){
+        let calle = document.getElementById("calle").value;
+        let numero = document.getElementById("numero").value;
+        let localidad = document.getElementById("localidad").value;
+        let cp = document.getElementById("cp").value;
+        let provincia = document.getElementById("provincia").value;
+        let telefono = document.getElementById("telefono").value;
+
+        if (!calle ){
+          alert("Ingrese la calle");
+          return false;
+        }
+        if (!numero ){
+        alert("Ingrese el numero");
+        return false;
+        }
+        if (!localidad ){
+        alert("Ingrese su localidad");
+        return false;
+        }
+        if (!cp ){
+        alert("Ingrese el codigo postal de su ciudad");
+        return false;
+        }
+        if (!provincia ){
+        alert("Ingrese la provincia");
+        return false;
+        }
+        if (!telefono ){
+        alert("Ingrese un telefono de contacto");
+        return false;
+        }
+        
+        Swal.fire({
+        html: '<p>Direccion cargada!</p>',
+        icon: 'success',
+        confirmButtonText: '<a href="./pago.html">IR A PAGAR</a>',
+        confirmButtonColor: 'rgb(33, 189, 163)',
+        background: 'rgb(34, 34, 78)',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+        }
+        })
+        return true; 
+      }

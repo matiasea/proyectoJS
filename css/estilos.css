@@ -9,6 +9,7 @@ header{
 }
 main{
     background-image: linear-gradient(to right,rgb(230, 230, 235),rgb(38, 65, 90));
+    align-content: center;
 }
 
 h1 {
@@ -23,7 +24,8 @@ h1 {
   
 
 .div-principal{
-    padding: 10%;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
 }
 
@@ -40,7 +42,7 @@ div{
 
 .boton-carro{
     position: absolute;
-  margin-left: 90%;
+  margin-left: 80%;
   margin-top: 0px;
     background-color: rgb(230, 230, 235);
 }
@@ -61,16 +63,24 @@ div{
 .carrito{
     background-color: rgb(253, 253, 253);
     width: 60%;
-    align: center;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .contador {
     font-weight: bold;
-    color: #f70a0a;
+    color: 34, 34, 78;
     padding: 10px;
     border-style: solid;
     font-size: 20px; 
     text-align: center;
-    background-color: rgb(116, 128, 64);
+    background-color: rgb(230, 230, 235);
     z-index: 999;
+    border-radius: 50%;
+}
+
+.ubicacionBusqueda {
+    position: relative;
+    align-content: flex-start;
 }
