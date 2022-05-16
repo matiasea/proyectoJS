@@ -115,14 +115,13 @@ for (let i = 0; i < botonEliminar.length; i++) {
 
 // --------------ACTUALIZAR CARRITO------------------
 
+//---------------BUSCAR PRODUCTOS ---------------
 
-
-//--------------BUSCAR PRODUCTO-------------------
-
-
-const buscarProducto = () => {
-    const busquedaProducto = document.getElementById("busqueda");
-    const busquedaArticulo = productos.filter(prod => prod.articulo == busquedaProducto.value.toUpperCase());
+const busquedaProducto = document.getElementById("busqueda");
+function buscarProducto(){
+    busquedaArticulo = productos.filter(function(producto) {
+    return productos.articulo === busquedaProducto;
+    })
     console.log(busquedaArticulo)
 
     if (busquedaArticulo.length >= 1){   
