@@ -96,24 +96,7 @@ function agregarAlCarrito(e){
 // -------------ELIMINAR DEL CARRITO --------------
 
 
-const eliminarDelCarrito = (id) => {
-    actualizarCarritos();
-    const productoEncontrado = productos.find((item) => item.id == id);
-    const indice = carrito.indexOf(productoEncontrado);
-    carrito.splice(indice, 1)
 
-
-const botonEliminar = document.getElementById("botonEliminar");
-for (let i = 0; i < botonEliminar.length; i++) {
-    const element = botonEliminar[i];
-    element.addEventListener("click", eliminarDelCarrito)
-
-    }
-}
-
-
-
-// --------------ACTUALIZAR CARRITO------------------
 
 //---------------BUSCAR PRODUCTOS ---------------
 
@@ -165,6 +148,7 @@ function buscarProducto(){
     buscarProducto()
     
     }
+
 
 //-------------CONTADOR CARRITO DE COMPRA----------------------
 
