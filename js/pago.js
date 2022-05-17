@@ -22,11 +22,10 @@ EL TOTAL DE TU COMPRA ES:$${totalaPagar}.
 
 //ABONAR CON DEBITO
 function pagaDebito(e){
-    //alert("$" + totalaPagar + " se debitará de la Tarjeta seleccionada.");
     Swal.fire({
-        html: '<p>${totalaPagar} se debitara de su caja de ahorro </p>',
+        html: '<h1>GRACIAS POR TU COMPRA</h1> <br> <p>Seleccionaste pagar con Tarjeta de Debito </p>',
         icon: 'success',
-        confirmButtonText: '<a href="../index.html">VOLVER AL INICIO</a>',
+        confirmButtonText: '<a href="../resumen.html">VER RESUMEN DE COMPRA</a>',
       confirmButtonColor: 'rgb(33, 189, 163)',
       background: 'rgb(34, 34, 78)',
         showClass: {
@@ -36,6 +35,13 @@ function pagaDebito(e){
           popup: 'animate__animated animate__fadeOutUp'
         }
       })
+      console.log("Efectivo/Debito :$" + totalaPagar);
+      const pago = "Efectivo/Debito :$" + totalaPagar;
+
+      const guardarPago = JSON.stringify(pago);
+      localStorage.setItem("pago", guardarPago);
+      
+
 }
 
 let btnDebito = document.getElementById("btnDebito");
@@ -46,19 +52,24 @@ function paga3cuotas(e){
     const totalEn3 = totalaPagar / 3;
 
     Swal.fire({
-        html: '<p>Seleccionaste pagar en 3 cuotas de: ${totaEn3} Gracias por tu compra. </p>',
-        icon: 'success',
-        confirmButtonText: '<a href="../index.html">VOLVER AL INICIO</a>',
-      confirmButtonColor: 'rgb(33, 189, 163)',
-      background: 'rgb(34, 34, 78)',
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
-      })
-    //alert ("Seleccionaste pagar en 3 cuotas de: " + totalaPagar / 3 + " Gracias por tu compra. ")
+      html: '<h1>GRACIAS POR TU COMPRA</h1> <br> <p>Seleccionaste pagar en 3 cuotas sin interes </p>',
+      icon: 'success',
+      confirmButtonText: '<a href="../resumen.html">VER RESUMEN DE COMPRA</a>',
+    confirmButtonColor: 'rgb(33, 189, 163)',
+    background: 'rgb(34, 34, 78)',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
+    console.log("3 cuotas de:$ " + totalEn3)
+    const pago = "3 cuotas de:$ " + totalEn3;
+
+    const guardarPago = JSON.stringify(pago);
+    localStorage.setItem("pago", guardarPago);
+
 }
 
 let btn3cuotas = document.getElementById("btn-3-cuotas");
@@ -69,19 +80,24 @@ function paga6cuotas(e){
   const totalEn6 = (totalaPagar * 1.25) / 6;
 
   Swal.fire({
-      html: '<p>Seleccionaste pagar en 6 cuotas de: ${totaEn6} Gracias por tu compra. </p>',
-      icon: 'success',
-      confirmButtonText: '<a href="../index.html">VOLVER AL INICIO</a>',
-      confirmButtonColor: 'rgb(33, 189, 163)',
-      background: 'rgb(34, 34, 78)',
-      showClass: {
-        popup: 'animate__animated animate__fadeInDown'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-      }
-    })
-  //alert ("Seleccionaste pagar en 3 cuotas de: " + totalaPagar / 3 + " Gracias por tu compra. ")
+    html: '<h1>GRACIAS POR TU COMPRA</h1> <br> <p>Seleccionaste pagar en 6 cuotas </p>',
+    icon: 'success',
+    confirmButtonText: '<a href="../resumen.html">VER RESUMEN DE COMPRA</a>',
+  confirmButtonColor: 'rgb(33, 189, 163)',
+  background: 'rgb(34, 34, 78)',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })
+  
+  console.log("6 cuotas de:$ " + totalEn6)
+    const pago = "6 cuotas de:$ " + totalEn6;
+
+    const guardarPago = JSON.stringify(pago);
+    localStorage.setItem("pago", guardarPago);
 }
 
 let btn6cuotas = document.getElementById("btn-6-cuotas");
@@ -92,19 +108,24 @@ btn6cuotas.addEventListener("click", paga6cuotas);
 //ABONAR EN 12 CUOTAS
 function paga12cuotas(e){
   const totalEn12 = (totalaPagar * 1.42) / 12
-    Swal.fire({
-      html: '<p>Seleccionaste pagar en 12 cuotas de: ${totaEn12} Gracias por tu compra. </p>',
-      icon: 'success',
-      confirmButtonText: '<a href="../index.html">VOLVER AL INICIO</a>',
-      confirmButtonColor: 'rgb(33, 189, 163)',
-      background: 'rgb(34, 34, 78)',
-      showClass: {
-        popup: 'animate__animated animate__fadeInDown'
-      },
-      hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-      }
-    })
+  Swal.fire({
+    html: '<h1>GRACIAS POR TU COMPRA</h1> <br> <p>Seleccionaste pagar en 12 cuotas </p>',
+    icon: 'success',
+    confirmButtonText: '<a href="../resumen.html">VER RESUMEN DE COMPRA</a>',
+  confirmButtonColor: 'rgb(33, 189, 163)',
+  background: 'rgb(34, 34, 78)',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })
+    console.log ("12 cuotas de: " + totalEn12);
+    const pago = "12 cuotas de:$ " + totalEn12;
+
+    const guardarPago = JSON.stringify(pago);
+    localStorage.setItem("pago", guardarPago);
 }
 
 let btn12cuotas = document.getElementById("btn-12-cuotas");
@@ -114,11 +135,11 @@ btn12cuotas.addEventListener("click", paga12cuotas);
 function paga24cuotas(e){
   const totalEn24 = (totalaPagar * 1.75) / 24
   Swal.fire({
-    html: '<p>Seleccionaste pagar en 24 cuotas de: ${totaEn24} <br> Gracias por tu compra. </p>',
+    html: '<h1>GRACIAS POR TU COMPRA</h1> <br> <p>Seleccionaste pagar en 24 cuotas </p>',
     icon: 'success',
-    confirmButtonText: '<a href="../index.html">VOLVER AL INICIO</a>',
-      confirmButtonColor: 'rgb(33, 189, 163)',
-      background: 'rgb(34, 34, 78)',
+    confirmButtonText: '<a href="../resumen.html">VER RESUMEN DE COMPRA</a>',
+  confirmButtonColor: 'rgb(33, 189, 163)',
+  background: 'rgb(34, 34, 78)',
     showClass: {
       popup: 'animate__animated animate__fadeInDown'
     },
@@ -126,6 +147,11 @@ function paga24cuotas(e){
       popup: 'animate__animated animate__fadeOutUp'
     }
   })
+  console.log ("24 cuotas de: " + totalEn24);
+  const pago = "24 cuotas de:$ " + totalEn24;
+
+  const guardarPago = JSON.stringify(pago);
+  localStorage.setItem("pago", guardarPago);
 }
 
 let btn24cuotas = document.getElementById("btn-24-cuotas");

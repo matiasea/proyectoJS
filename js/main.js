@@ -1,19 +1,5 @@
-/* //INGRESO DE USUARIO REGISTRADO
- let usuario = prompt ("Ingresa tu usuario")
-let contra = prompt ("Ingresa tu contraseña")
-let usuario1 = "Matias"
-let contra1 = 1234
 
-
-while ((usuario != usuario1) || (contra != contra1)) {
-    alert ("Ingreso Incorrecto, vuelve a intentarlo")
-    usuario = prompt ("Ingresa tu usuario")
-    contra = prompt ("Ingresa tu contraseña")
-    
-}
- */
-//alert ("Bienvenido " + usuario) 
-
+//----------------------------------------------------
 // ---------- TRAER PRODUCTOS DEL JSON ---------------
 
 const productos = [];
@@ -29,9 +15,10 @@ const traerProductos = async () => {
 
 traerProductos();
 
-
+//------------------------------------------------------
 // ---------- CREAR LISTA DE PRODUCTOS ------------------
 
+const cardGroup = document.getElementsByClassName("card");
 
 function productosDom(){
     for (let i = 0; i < productos.length; i++) {
@@ -93,22 +80,56 @@ function agregarAlCarrito(e){
     //localStorage.setItem( "carrito", carrito)
 }
 
-// -------------ELIMINAR DEL CARRITO --------------
+/* //------------------------------------------------
+//----------------ELIMINAR PRODUCTOS--------------
 
+function eliminarDelCarrito(e){
+    const prod = (e.target).parentNode.parentNode.parentNode;
+    const id = prod.getAttribute("id");
+    const productoEncontrado = carrito.find((item) => item.id == id);
+    const indice = carrito.indexOf(productoEncontrado);
+    carrito.splice(indice, 1);
+    actualizarCarrito();
+    console.log(carrito);
+    const guardarCarrito = JSON.stringify(carrito);
+    localStorage.setItem("carrito", guardarCarrito);
+     Toastify({
+        text: "Producto eliminado carrito!",
+        duration: 2500,
+        gravity: "top",
+        position: "right",
+        style: {
+          background: "linear-gradient(to right, rgb(34, 34, 78), rgb(33, 189, 163))",
+        },
+      }).showToast(); 
+      contarProductos();
 
+    //localStorage.setItem( "carrito", carrito)
+}
 
+let btnEliminar = document.getElementById("botonEliminar");
+btnEliminar.onclick = () => {
+eliminarDelCarrito()
+ 
+} 
+ */
+//-----------------------------------------------------------------//
+//--------------------------ACTUALIZAR CARRITO --------------------
+/* 
+const actualizarCarrito= () => {
+    carrito = [];
+    productosCarrito()
+}
 
+ */
 //---------------BUSCAR PRODUCTOS ---------------
 
-const busquedaProducto = document.getElementById("busqueda");
-function buscarProducto(){
-    busquedaArticulo = productos.filter(function(producto) {
-    return productos.articulo === busquedaProducto;
-    })
-    console.log(busquedaArticulo)
 
-    if (busquedaArticulo.length >= 1){   
-    //BORRAR LA VISTA DE PRODUCTOS Y MOSTRAR EL ARRAY busquedaArticulo
+const buscarProducto = () => {
+const busquedaProducto = document.getElementById("busqueda");
+const busquedaArticulo = productos.filter(perf => perf.articulo == busquedaProducto.value.toUpperCase());
+console.log(busquedaArticulo);
+if (busquedaArticulo.length >= 1){  
     for (let i = 0; i < busquedaArticulo.length; i++) {
         const element = busquedaArticulo[i];
         const {id, articulo, marca, precio, img, descripcion1, descripcion2} = element;
@@ -137,17 +158,21 @@ function buscarProducto(){
     for (let i = 0; i < botonAgregar.length; i++) {
     const element = botonAgregar[i];
     element.addEventListener("click", agregarAlCarrito)
-}
+    }
 
     }else{
         alert("no se encontraron resultados")
         }
     }
-    let btnbuscar = document.getElementById("button-addon2");
-    btnbuscar.onclick = () => {
-    buscarProducto()
-    
-    }
+
+
+
+let btnbuscar = document.getElementById("button-addon2");
+btnbuscar.onclick = () => {
+buscarProducto()
+}
+
+
 
 
 //-------------CONTADOR CARRITO DE COMPRA----------------------
@@ -162,4 +187,3 @@ function contarProductos(){
     const visualizacion = numerito.length;
     contador.append(visualizacion);
 }
-

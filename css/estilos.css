@@ -1,7 +1,7 @@
 html{
     margin: 0px;
     padding: 0px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: monospace;
 }
 
 header{
@@ -16,10 +16,9 @@ h1 {
     font-weight: bold;
     color: #0af7c3;
     padding: 10px;
-    border-style: solid;
     font-size: 50px; 
     text-align: center;
-    background-color: rgb(64, 81, 128);
+    background-color: rgb(31, 39, 59);
 }
   
 
