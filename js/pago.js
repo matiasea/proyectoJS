@@ -9,7 +9,7 @@ function obtener_valor (){
 obtener_valor();
 
 let totalDom = 
-`<p class="text-center"><strong>
+`<p class="text-center div-resumen1 sombra1" ><strong>
 EL TOTAL DE TU COMPRA ES:$${totalaPagar}.
 </strong> 
 </p>`;

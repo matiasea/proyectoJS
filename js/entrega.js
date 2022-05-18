@@ -22,27 +22,74 @@ function validar_formulario(){
   const telefonoValue = document.getElementById("telefono").value;
 
   if (!calleValue ){
-    alert("Ingrese la calle");
+    Swal.fire({
+      title: "Ingrese la calle",
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
     return false;
   }
   if (!numeroValue ){
-  alert("Ingrese el numero");
+    Swal.fire({
+      title: "Ingrese el número",
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
   return false;
   }
   if (!localidadValue ){
-  alert("Ingrese su localidad");
+    Swal.fire({
+      title: "Ingrese su localidad/ciudad",
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
   return false;
   }
   if (!cpValue ){
-  alert("Ingrese el codigo postal de su ciudad");
+    Swal.fire({
+      title: "Ingrese el codigo postal de su ciudad",
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
   return false;
   }
-  if (!provinciaValue ){
-  alert("Ingrese la provincia");
+  if (!provinciaValue ){Swal.fire({
+    title: "Ingrese su provincia",
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  });
   return false;
   }
-  if (!telefonoValue ){
-  alert("Ingrese un telefono de contacto");
+  if (!telefonoValue )
+  {Swal.fire({
+    title: "Ingrese un numero de contacto",
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  });
   return false;
   }
   
@@ -119,7 +166,7 @@ function validar_formulario(){
           nuevaDireccion();
         
         }else{
-          alert("Ingrese toda la información necesaria");
+          //alert("Ingrese toda la información necesaria");
         }   
     });
     

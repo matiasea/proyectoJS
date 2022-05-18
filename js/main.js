@@ -26,7 +26,7 @@ function productosDom(){
     const {id, articulo, marca, precio, img, descripcion1, descripcion2} = element;
     const cardGroup = document.getElementsByClassName("card")
     const dom = 
-    `<div class="row g-0 sombra1" id="${id}"> 
+    `<div class="row g-0 sombra1 div-resumen" id="${id}"> 
     <div class="col-md-4" >
   <img src=${img} class="img-fluid rounded-start" alt="...">
   </div>
@@ -34,7 +34,7 @@ function productosDom(){
   <div class="card-body">
     <h5 class="card-title">${articulo + " " + marca}</h5>
     <p class="card-text">${descripcion1} <br> ${descripcion2} <br> PRECIO: $ ${precio.toLocaleString()}</p>
-    <button class="btn-agregar">Agregar al Carrito</button><br>
+    <button class="btn-agregar "btn btn-dark"">Agregar al Carrito</button><br>
     </div>
     </div>
 </div>`
