@@ -112,7 +112,7 @@ eliminarDelCarrito()
  
 //-----------------------------------------------------------------//
 //--------------------------ACTUALIZAR CARRITO --------------------
-
+/* 
 const actualizarCarrito= () => {
     carrito = [];
     productosCarrito()
