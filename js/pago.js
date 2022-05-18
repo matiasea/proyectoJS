@@ -1,5 +1,5 @@
-
-
+//-------------------------------------------------------
+//---------------OBTENEMOS VALOR DE LA COMPRA-----------
 function obtener_valor (){
     totalaPagar = parseInt(localStorage.getItem( "totalPagar" ));
     //document.write("EL TOTAL DE TU COMPRA ES: $" + totalaPagar);
@@ -8,6 +8,9 @@ function obtener_valor (){
 
 obtener_valor();
 
+
+//---------------------------------------------------
+//--------- INGRESAMOS EL VALOR AL HTML DOM-----------------
 let totalDom = 
 `<p class="text-center div-resumen1 sombra1" ><strong>
 EL TOTAL DE TU COMPRA ES:$${totalaPagar}.
@@ -19,6 +22,8 @@ EL TOTAL DE TU COMPRA ES:$${totalaPagar}.
   document.body.append(pTotal);
 
 
+//--------------------------------------------------------------
+//----------------- FUNCIONES PARA LOS DISTINTOS TIPOS DE PAGO----------
 
 //ABONAR CON DEBITO
 function pagaDebito(e){

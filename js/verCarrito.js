@@ -1,5 +1,12 @@
+//-------------------------------------------------------------------
+//--------------- TRAEMOS LOS PRODUCOTS DEL LS--------------------------
+
 const productosSeleccionados = JSON.parse(localStorage.getItem("carrito")) || [];
 productosSeleccionados.length === 0 && alert("El Carrito está vacío") 
+
+
+//------------------------------------------------------------------
+//----- CREAMOS UNA TABLA CON EL RESUMEN DE LOS PRODUCTOS SELECCIONADOS--------------
 let cardGroup2 = document.getElementsByClassName("table")
 productosCarrito();
 
@@ -45,4 +52,4 @@ const tablaTotal = document.getElementsByClassName("table-2");
     tablaTotal[0].innerHTML += totalCompra;
 
 
-//actualizarCarrito();
+

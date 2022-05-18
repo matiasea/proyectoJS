@@ -1,3 +1,7 @@
+
+//--------------------------------------------------------
+//----------CONSTRUCTOR DIRECCION DE ENTREGA-----------------
+
 class Direccion{
     constructor(calle,numero,localidad,cp,provincia,telefono,comentario){
         this.calle = calle;
@@ -11,9 +15,9 @@ class Direccion{
 }
 
 
-//VALIDAR FORMULARIO
+//----------------------------------------------------
+//-----------------VALIDAR FORMULARIO----------------------
 function validar_formulario(){
-  
   const calleValue = document.getElementById("calle").value;
   const numeroValue = document.getElementById("numero").value;
   const localidadValue = document.getElementById("localidad").value;
@@ -109,7 +113,8 @@ function validar_formulario(){
   return true; 
 }
 
-
+//------------------------------------------------------
+//------------------ CREAMOS LA NUEVA DIRECCION -------------
 
     function nuevaDireccion (){
         const calle = document.getElementById("calle").value.toUpperCase();
@@ -123,15 +128,16 @@ function validar_formulario(){
         let direccion1 = new Direccion(calle,numero,localidad,cp,provincia,telefono,comentario);
         
         console.log(direccion1);
-        
+        //GUARDAMOS EN LS
         const guardarDireccion = JSON.stringify(direccion1);
         localStorage.setItem("direccionEntrega", guardarDireccion);
-        
-       
-    
+         
     }
 
   
+//------------------------------------------
+//------------ CREAMOS FORMULARIO PARA INGRESO DE DATOS DOM ------------------
+
     let datosDeEnvio = `<div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Username" aria-describedby="basic-addon1 id="nombre"">
   </div>
@@ -154,12 +160,13 @@ function validar_formulario(){
   ;
 
   let divEntrega = document.createElement("div");
-  
   divEntrega.innerHTML = "<div>"+datosDeEnvio+"</div>";
-
   document.body.append(divEntrega);
 
 
+
+  //------------------- EVENTO CREAR DIRECCION DE ENTREGA-----------
+  
   let btnentrega = document.getElementById("btn-entrega");
     btnentrega.addEventListener("click", () => {
         if (validar_formulario()){

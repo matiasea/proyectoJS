@@ -15,6 +15,8 @@ const traerProductos = async () => {
 
 traerProductos();
 
+
+
 //------------------------------------------------------
 // ---------- CREAR LISTA DE PRODUCTOS ------------------
 
@@ -50,10 +52,7 @@ for (let i = 0; i < botonAgregar.length; i++) {
 
 }
 
-
-
-
-
+//--------------------------------------------------------------
 // ---------------- AGREGAR PRODUCTOS AL CARRITO ---------------
 
 
@@ -76,8 +75,6 @@ function agregarAlCarrito(e){
         },
       }).showToast();
       contarProductos();
-
-    //localStorage.setItem( "carrito", carrito)
 }
 
 /* //------------------------------------------------
@@ -112,18 +109,22 @@ btnEliminar.onclick = () => {
 eliminarDelCarrito()
  
 } 
- */
+ 
 //-----------------------------------------------------------------//
 //--------------------------ACTUALIZAR CARRITO --------------------
-/* 
+
 const actualizarCarrito= () => {
     carrito = [];
     productosCarrito()
 }
 
  */
-//---------------BUSCAR PRODUCTOS ---------------
 
+
+
+
+//-------------------------------------------------
+//---------------BUSCAR PRODUCTOS ---------------
 
 const buscarProducto = () => {
 const busquedaProducto = document.getElementById("busqueda");
@@ -166,7 +167,6 @@ if (busquedaArticulo.length >= 1){
     }
 
 
-
 let btnbuscar = document.getElementById("button-addon2");
 btnbuscar.onclick = () => {
 buscarProducto()
@@ -174,7 +174,7 @@ buscarProducto()
 
 
 
-
+//------------------------------------------------------------
 //-------------CONTADOR CARRITO DE COMPRA----------------------
 
 const contadorDom = document.getElementById("contador");

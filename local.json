@@ -5,7 +5,7 @@
          "articulo":"LAVARROPAS",
          "marca":"Philco",
          "precio":58000,
-         "img":"./img/lavarropas.jpg",
+         "img":"../img/lavarropas.jpg",
          "descripcion1":"Capacidad 6Kg.",
          "descripcion2":"Centrifugado 800 RPM"
     },
