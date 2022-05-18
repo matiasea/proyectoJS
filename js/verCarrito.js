@@ -11,6 +11,17 @@ let cardGroup2 = document.getElementsByClassName("table")
 productosCarrito();
 
 function productosCarrito(){
+    if (productosSeleccionados.length <= 0){
+        let carroVacio = 
+`<p class="text-center div-resumen1 sombra1" ><strong>
+No hay productos en el carrito.
+</strong> 
+</p>`;
+
+  let carritoVacio = document.createElement("p");
+  carritoVacio.innerHTML = "<p>"+carroVacio+"<p>";
+  document.body.append(carritoVacio)
+  }else{    
     for (let i = 0; i < productosSeleccionados.length; i++) {
     const element = productosSeleccionados[i];
     const {articulo, marca, precio, img} = element;
@@ -22,7 +33,7 @@ function productosCarrito(){
             <td>$${precio} </td>
     </tbody>`  
     cardGroup2[0].innerHTML += dom;
-    
+}    
 }
 }
 
