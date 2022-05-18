@@ -24,37 +24,41 @@ function productosCarritoResumen(){
 }
 }
 
-// ----------------- RECUPERAR DATOS DE LA ENTREGA ---------------------
-const entregaResumen = JSON.parse(localStorage.getItem("direccionEntrega"))
-console.log (entregaResumen)
 
-let direccionDom = document.getElementsByClassName("div1");
+//----------------------------------------------------------------------
+// ----------------- RECUPERAR DATOS DE LA ENTREGA ---------------------
+const entregaResumen = JSON.parse(localStorage.getItem("direccionEntrega"));
+console.log (entregaResumen);
 
 function direccionResumen(){
-for (let i = 0; i < entregaResumen.length; i++) {
-    const element = entregaResumen[i];
-    const {calle, numero, localidad, provincia, telefono, comentarios} = element;
-    domE = `<div>
-          <tr>
-          <p>DIRECCION: ${calle} + ${numero} </p>
-            <p> LOCALIDAD: ${localidad} </p>
-            <p> PROVINCIA: ${provincia} </p>
-            <p> TELEFONO: ${telefono} </p>
-            <p> COMENTARIOS: ${comentarios} </p>
-    </div>`  
-    direccionDom.appendChild (domE);
-    
+  let entregaDomicilio = Object.entries(entregaResumen);
+console.log(entregaDomicilio);
 
-}
-}
+let datosEntregaResumen = `<div class = "div-resumen sombra1"> ${entregaDomicilio[0]} <br><br>
+                                ${entregaDomicilio[1]} <br><br>
+                                ${entregaDomicilio[2]} <br><br>
+                                ${entregaDomicilio[3]} <br><br>
+                                ${entregaDomicilio[4]} <br><br>
+                                ${entregaDomicilio[5]} <br><br>
+                                ${entregaDomicilio[6]} </div>`
+
+  ;
+
+  let divEntregaResumen= document.createElement("div");
+  divEntregaResumen.innerHTML = "<div>"+datosEntregaResumen+"</div>";
+  document.body.append(divEntregaResumen);
+  }
+ 
 direccionResumen();
 
+
+//---------------------------------------------------------------
  //----------------RECUPERAR DATOS DEL PAGO-----------------------
 
  const pagoResumen = JSON.parse(localStorage.getItem("pago"))
 console.log(pagoResumen)
 
-let datosPagoResumen = `<div>
+let datosPagoResumen = `<div class = "div-resumen sombra1">
 <p>DATOS DEL PAGO: ${pagoResumen}</p>
 </div>`
 

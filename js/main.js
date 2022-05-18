@@ -26,7 +26,7 @@ function productosDom(){
     const {id, articulo, marca, precio, img, descripcion1, descripcion2} = element;
     const cardGroup = document.getElementsByClassName("card")
     const dom = 
-    `<div class="row g-0" id="${id}"> 
+    `<div class="row g-0 sombra1" id="${id}"> 
     <div class="col-md-4" >
   <img src=${img} class="img-fluid rounded-start" alt="...">
   </div>

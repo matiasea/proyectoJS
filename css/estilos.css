@@ -83,3 +83,25 @@ div{
     position: relative;
     align-content: flex-start;
 }
+
+.div-resumen {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    font-size: medium;
+    width: 90%;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+
+    }
+
+    .table1{
+        padding-bottom : 500px;
+    }
+
+    .sombra1{
+        -webkit-box-shadow: 0 10px 6px -6px #777;
+        -moz-box-shadow: 0 10px 6px -6px #777;
+        box-shadow: 0 10px 6px -6px #777;
+}

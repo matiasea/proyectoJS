@@ -11,15 +11,67 @@ class Direccion{
 }
 
 
+//VALIDAR FORMULARIO
+function validar_formulario(){
+  
+  const calleValue = document.getElementById("calle").value;
+  const numeroValue = document.getElementById("numero").value;
+  const localidadValue = document.getElementById("localidad").value;
+  const cpValue = document.getElementById("cp").value;
+  const provinciaValue = document.getElementById("provincia").value;
+  const telefonoValue = document.getElementById("telefono").value;
+
+  if (!calleValue ){
+    alert("Ingrese la calle");
+    return false;
+  }
+  if (!numeroValue ){
+  alert("Ingrese el numero");
+  return false;
+  }
+  if (!localidadValue ){
+  alert("Ingrese su localidad");
+  return false;
+  }
+  if (!cpValue ){
+  alert("Ingrese el codigo postal de su ciudad");
+  return false;
+  }
+  if (!provinciaValue ){
+  alert("Ingrese la provincia");
+  return false;
+  }
+  if (!telefonoValue ){
+  alert("Ingrese un telefono de contacto");
+  return false;
+  }
+  
+  Swal.fire({
+  html: '<p>Direccion cargada!</p>',
+  icon: 'success',
+  confirmButtonText: '<a href="./pago.html">IR A PAGAR</a>',
+  confirmButtonColor: 'rgb(33, 189, 163)',
+  background: 'rgb(34, 34, 78)',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+  popup: 'animate__animated animate__fadeOutUp'
+  }
+  })
+  return true; 
+}
+
+
 
     function nuevaDireccion (){
-        let calle = document.getElementById("calle");
-        let numero = document.getElementById("numero");
-        let localidad = document.getElementById("localidad");
-        let cp = document.getElementById("cp");
-        let provincia = document.getElementById("provincia");
-        let telefono = document.getElementById("telefono");
-        let comentario = document.getElementById("comentario");
+        const calle = document.getElementById("calle").value.toUpperCase();
+        const numero = document.getElementById("numero").value.toUpperCase();
+        const localidad = document.getElementById("localidad").value.toUpperCase();
+        const cp = document.getElementById("cp").value.toUpperCase();
+        const provincia = document.getElementById("provincia").value.toUpperCase();
+        const telefono = document.getElementById("telefono").value.toUpperCase();
+        const comentario = document.getElementById("comentario").value.toUpperCase();
 
         let direccion1 = new Direccion(calle,numero,localidad,cp,provincia,telefono,comentario);
         
@@ -28,13 +80,13 @@ class Direccion{
         const guardarDireccion = JSON.stringify(direccion1);
         localStorage.setItem("direccionEntrega", guardarDireccion);
         
-
+       
     
     }
 
   
     let datosDeEnvio = `<div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Username" aria-describedby="basic-addon1 id="nombre"">
   </div>
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Calle" aria-label="Username" id="calle">
@@ -72,52 +124,7 @@ class Direccion{
     });
     
     
-//VALIDAR FORMULARIO
-    function validar_formulario(){
-        let calle = document.getElementById("calle").value;
-        let numero = document.getElementById("numero").value;
-        let localidad = document.getElementById("localidad").value;
-        let cp = document.getElementById("cp").value;
-        let provincia = document.getElementById("provincia").value;
-        let telefono = document.getElementById("telefono").value;
 
-        if (!calle ){
-          alert("Ingrese la calle");
-          return false;
-        }
-        if (!numero ){
-        alert("Ingrese el numero");
-        return false;
-        }
-        if (!localidad ){
-        alert("Ingrese su localidad");
-        return false;
-        }
-        if (!cp ){
-        alert("Ingrese el codigo postal de su ciudad");
-        return false;
-        }
-        if (!provincia ){
-        alert("Ingrese la provincia");
-        return false;
-        }
-        if (!telefono ){
-        alert("Ingrese un telefono de contacto");
-        return false;
-        }
-        
-        Swal.fire({
-        html: '<p>Direccion cargada!</p>',
-        icon: 'success',
-        confirmButtonText: '<a href="./pago.html">IR A PAGAR</a>',
-        confirmButtonColor: 'rgb(33, 189, 163)',
-        background: 'rgb(34, 34, 78)',
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-        }
-        })
-        return true; 
-      }
+
+
+      
