@@ -5,7 +5,7 @@
          "articulo":"LAVARROPAS",
          "marca":"Philco",
          "precio":58000,
-         "img":"../img/lavarropas.jpg",
+         "img":"./img/lavarropas.jpg",
          "descripcion1":"Capacidad 6Kg.",
          "descripcion2":"Centrifugado 800 RPM"
     },
@@ -14,7 +14,7 @@
         "articulo":"HELADERA",
         "marca":"Patrick",
         "precio":65000,
-        "img":"../img/heladera.jpg",
+        "img":"./img/heladera.jpg",
         "descripcion1":"Capacidad: 329LTS",
         "descripcion2":"Dispenser de Agua"
     },
@@ -23,7 +23,7 @@
         "articulo":"COCINA",
         "marca":"Longvie",
         "precio":49000,
-        "img":"../img/cocina.jpg",
+        "img":"./img/cocina.jpg",
         "descripcion1":"Luz en horno",
         "descripcion2":"Encendido Electrico"
     },
@@ -32,7 +32,7 @@
         "articulo":"TV SMART",
         "marca":"Samsung",
         "precio":35000,
-        "img":"../img/TV.jpg",
+        "img":"./img/TV.jpg",
         "descripcion1":"Tecnologia Smart",
         "descripcion2":"32P - Resolucion UHD"
     },
@@ -41,7 +41,7 @@
         "articulo":"TOSTADORA",
         "marca":"Atma",
         "precio":5000,
-        "img":"../img/tostadora.jpg",
+        "img":"./img/tostadora.jpg",
         "descripcion1":"1000 W",
         "descripcion2":"Capacidad 2 panes"
     },
@@ -50,7 +50,7 @@
         "articulo":"EXPRIMIDOR",
         "marca":"Philips",
         "precio":4500,
-        "img":"../img/exprimidor.jpg",
+        "img":"./img/exprimidor.jpg",
         "descripcion1":"0,5 LTS",
         "descripcion2":"300 W"
     },
@@ -59,7 +59,7 @@
         "articulo":"HELADERA",
         "marca":"Bambi",
         "precio":56000,
-        "img":"../img/heladera-b.jpg",
+        "img":"./img/heladera-b.jpg",
         "descripcion1":"365 LTS",
         "descripcion2":"Clase A++"
     },
@@ -68,7 +68,7 @@
         "articulo":"TV SMART",
         "marca":"Noblex",
         "precio":71000,
-        "img":"../img/tv-55.jpg",
+        "img":"./img/tv-55.jpg",
         "descripcion1":"Tecnologia Smart",
         "descripcion2":"55P - Resolucion 4K"
     },
@@ -77,7 +77,7 @@
         "articulo":"TV SMART",
         "marca":"Noblex",
         "precio":124000,
-        "img":"../img/tv-75.jpg",
+        "img":"./img/tv-75.jpg",
         "descripcion1":"Tecnologia Smart",
         "descripcion2":"75P - Resolucion 8K"
     },
@@ -86,7 +86,7 @@
         "articulo":"COCINA",
         "marca":"Florencia",
         "precio":47000,
-        "img":"../img/cocina-f.jpg",
+        "img":"./img/cocina-f.jpg",
         "descripcion1":"Facil Limpieza",
         "descripcion2":"Timer - Termostato"
     },
@@ -95,7 +95,7 @@
         "articulo":"PAVA ELECTRICA",
         "marca":"Atma",
         "precio":8200,
-        "img":"../img/pava-a.jpg",
+        "img":"./img/pava-a.jpg",
         "descripcion1":"Regulador de Temperatura",
         "descripcion2":"1.5 LTS"
     },
@@ -104,7 +104,7 @@
         "articulo":"PAVA ELECTRICA",
         "marca":"Kanji",
         "precio":4500,
-        "img":"../img/pava-k.jpg",
+        "img":"./img/pava-k.jpg",
         "descripcion1":"Indicador de Nivel de Agua",
         "descripcion2":"1.7 LTS"
     },
@@ -113,7 +113,7 @@
         "articulo":"CAFETERA",
         "marca":"Oster",
         "precio":54500,
-        "img":"../img/cafetera.jpg",
+        "img":"./img/cafetera.jpg",
         "descripcion1":" Cafe molido o capsulas (Nespresso)",
         "descripcion2":"Sistema termico avanzado"
     }
