@@ -34,9 +34,9 @@ function productosDom(){
   </div>
   <div class="col-md-8">
   <div class="card-body">
-    <h5 class="card-title">${articulo + " " + marca}</h5>
+    <h5 class="card-title tituloCard">${articulo + " " + marca}</h5>
     <p class="card-text">${descripcion1} <br> ${descripcion2} <br> PRECIO: $ ${precio.toLocaleString()}</p>
-    <button class="btn-agregar "btn btn-dark"">Agregar al Carrito</button><br>
+    <button class="btn-agregar btn btn-dark">Agregar al Carrito</button><br>
     </div>
     </div>
 </div>`
